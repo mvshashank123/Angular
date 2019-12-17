@@ -1,0 +1,44 @@
+<form>
+UserName:
+<input type="text" [(ngModel)]="username" name="username" #userNameRef="ngModel" required pattern="[A-Z][a-z]{2,}$">
+<div *ngIf="userNameRef.errors && (userNameRef.dirty || userNameRef.touched)" class="alert alert-danger">
+<div [hidden]="!userNameRef.errors.required">username is required</div>
+<div [hidden]="!userNameRef.errors.pattern">username starts with capital letter</div>
+</div>
+<br>
+Password:
+<input type="password" [(ngModel)]="pword" name="pword" #pwordRef="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@]).{8,}$">
+<div *ngIf="pwordRef.errors && (pwordRef.dirty || pwordRef.touched)" class="alert alert-danger">
+    <div [hidden]="!pwordRef.errors.required">password is required</div>
+    <div [hidden]="!pwordRef.errors.pattern">The password must have minimum of 8 characters and have a number, special character</div>
+</div>
+<br>
+Skills:
+<select [(ngModel)]="skill" name="skill" #skillRef="ngModel" required>
+    <option *ngFor="let s of skills">{{s}}</option>
+</select>
+<div *ngIf="skillRef.errors && (skillRef.dirty || skillRef.touched)" class="alert alert-danger">
+    <div [hidden]="!skillRef.errors.required">Skill is required</div>
+</div>
+<br>
+Gender:
+<input type="radio" [(ngModel)]="gender" name="gender" #genRef="ngModel" value="male" required>
+Male
+<input type="radio" [(ngModel)]="gender" name="gender" #genRef="ngModel" value="female" required>
+Female
+<div *ngIf="genRef.errors && (genRef.dirty || genRef.touched)" class="alert alert-danger">
+    <div [hidden]="!genRef.errors.required">Select a gender</div>
+</div>
+<br>
+Languages
+<input type="checkbox" [(ngModel)]="lang1" name="lang1" required #lang1Ref="ngModel">Telugu
+<input type="checkbox" [(ngModel)]="lang2" name="lang2" required #lang2Ref="ngModel">Hindi
+<input type="checkbox" [(ngModel)]="lang3" name="lang3" required #lang3Ref="ngModel">English
+
+<div *ngIf="((lang1Ref.errors && lang1Ref.touched) && (lang2Ref.errors && lang1Ref.touched) && (lang3Ref.errors&& lang1Ref.touched))" class="alert alert-danger">
+    Select a Language
+</div>
+<br>
+<button (click)="userdetails()">Submit</button>
+
+</form>

@@ -1,0 +1,61 @@
+<form [formGroup]="myForm">
+    <div>Username</div>
+    <input type="text" formControlName="username">
+    <div *ngFor="let u of error_messages.username">
+        <div *ngIf="myForm.get('username').hasError(u.type)">
+            <b style="color:red">{{u.message}}</b>
+        </div>
+    </div>
+    <div>Password</div>
+    <div><input type="password" formControlName="password"></div>
+    <div *ngFor="let u of error_messages.password">
+        <div *ngIf="myForm.get('password').hasError(u.type)">
+            <b style="color:red">{{u.message}}</b>
+        </div>
+    </div>
+    <div>Mail</div>
+    <div><input type="email" formControlName="email"></div>
+    <div *ngFor="let u of error_messages.email">
+        <div *ngIf="myForm.get('email').hasError(u.type)">
+            <b style="color:red">{{u.message}}</b>
+        </div>
+    </div>
+    <div>Languages</div>
+<div>
+ <select formControlName="langs">
+ 
+ <option>Select</option>
+ <option>Java</option>
+ <option>React</option>
+ <option>Angular </option>
+ 
+ 
+ </select>
+ <div *ngFor="let u of error_messages.langs">
+ <div *ngIf="myForm.get('langs').hasError(u.type)">
+ <b style="color:red">{{u.message}} </b>
+ </div>
+ </div>
+</div>
+<div>Gender</div>
+<div>Male
+    <input type="radio" formControlName="gender" value="Male">
+    Female
+    <input type="radio" formControlName="gender" value="Female">
+    Others
+    <input type="radio" formControlName="gender" value="others">
+    <div *ngFor="let u of error_messages.gender">
+        <div *ngIf="myForm.get('gender').hasError(u.type)">
+            <b style="color:red">{{u.message}}</b>
+        </div>
+    </div>
+</div>
+ <div>Agree Terms and Conditions</div>
+ <input type="checkbox" formControlName="terms">
+ <div *ngFor="let u of error_messages.terms">
+    <div *ngIf="myForm.get('terms').hasError(u.type) && (myForm.get('terms').dirty)">
+        <b style="color:red">{{u.message}}</b>
+    </div>
+</div>
+ 
+</form>
