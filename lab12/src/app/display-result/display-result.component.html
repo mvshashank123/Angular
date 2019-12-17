@@ -1,0 +1,20 @@
+<p>Angular 2 Operation</p>
+<div>
+    ID
+    <input type="text" [(ngModel)]="id">
+</div>
+<div>
+    Name
+    <input type="text" [(ngModel)]="name">
+</div>
+<div>
+    Salary
+    <input type="text" [(ngModel)]="salary">
+</div>
+<div>
+    Department
+    <input type="text" [(ngModel)]="dept">
+</div>
+<button (click)="addEmp()">Add Employee</button>
+<br>
+{{id}} {{name}} {{salary}} {{dept}}

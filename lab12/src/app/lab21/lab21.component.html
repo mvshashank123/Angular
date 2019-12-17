@@ -1,0 +1,52 @@
+<p>Angular 2 Operation</p>
+<div>
+    ID
+    <input type="text" [(ngModel)]="id">
+</div>
+<div>
+    Name
+    <input type="text" [(ngModel)]="name">
+</div>
+<div>
+    Salary
+    <input type="text" [(ngModel)]="salary">
+</div>
+<div>
+    Department
+    <input type="text" [(ngModel)]="dept">
+</div>
+<button (click)="addEmp()" [(ngModel)]="emp">Add Employee</button>
+<br>
+<table border='1'>
+    <tr>
+       <td>ID</td>
+       <td>Name</td>
+       <td>Salary</td>
+       <td>Department</td>
+       <td>Remove</td>
+    </tr>
+    <tr *ngFor="let e of emp;let i=index">
+        <td>{{e.empId}}</td>
+        <td>{{e.empName}}</td>
+        <td>{{e.empSalary|currency:'INR'}}</td>
+        <td>{{e.empDept}}</td>
+        <td><button (click)="delete(i)">Delete</button></td>
+    </tr>
+</table>
+
+<hr>
+
+LowerCasePipe: {{'CAPGEMINI'|lowercase}}
+UpperCase:{{'capgemini'|uppercase}}
+Number:{{10|number:'4.1-2'}}
+Percent:{{2|percent}}
+NUM:{{423|number:'5.2-3'}}
+date:{{d|date:'dd/MM/yyyy'}}
+date:{{d|date:'full'}}
+date:{{d|date:'short'}}
+date:{{d|date:'EEEE'}}
+date:{{d|date:'mm'}}
+date:{{d|date:'EEE'}}
+date:{{d|date:'hh'}}
+<br>
+{{['a','b','c','d']|slice:1:2}}

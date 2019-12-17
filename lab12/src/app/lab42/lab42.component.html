@@ -1,0 +1,22 @@
+<table border='1'>
+    <tr>
+        <th>Book Id</th>
+        <th>Book Title</th>
+        <th>Book Author</th>
+        <th>Book Year of Publish</th>
+    </tr>
+    <tr>
+        <td><input type="search"[(ngModel)]="a"></td>
+        <td><input type="search"[(ngModel)]="b"></td>
+        <td><input type="search"[(ngModel)]="c"></td>
+        <td><input type="search"[(ngModel)]="d"></td>
+    </tr>
+    <tr *ngFor="let b of books|filter1:a:b:c:d">
+        <td>{{b.id}}</td>
+        <td>{{b.title}}</td>
+        <td>{{b.author}}</td>
+        <td>{{b.year}}</td>
+
+    </tr>
+    
+</table>
