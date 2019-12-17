@@ -1,0 +1,34 @@
+{
+  "movie": [
+    {
+      "id": 1,
+      "cat": "action",
+      "rating": 8,
+      "name": "mission impossible"
+    },
+    {
+      "id": 2,
+      "name": "action",
+      "rating": 7,
+      "cat": "end game"
+    },
+    {
+      "id": 3,
+      "rating": "",
+      "name": "",
+      "cat": ""
+    },
+    {
+      "id": 4,
+      "rating": 8,
+      "name": "skb",
+      "cat": "satire"
+    },
+    {
+      "id": 5,
+      "rating": 8,
+      "name": "kadjk",
+      "cat": "action"
+    }
+  ]
+}
