@@ -1,0 +1,11 @@
+<h1>Edit Product Details</h1>
+Id:
+<input type="number" [(ngModel)]="product.id" readonly class="form-control">
+Name:
+<input type="text" [(ngModel)]="product.name">
+Description:
+<input type="text" [(ngModel)]="product.desc">
+Price:
+<input type="number" [(ngModel)]="product.price">
+<br>
+<button (click)="updateProduct()" class="btn btn-info">Edit</button>

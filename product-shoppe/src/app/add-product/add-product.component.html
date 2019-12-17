@@ -1,0 +1,19 @@
+<form [formGroup]="myForm">
+<h1>Add New Product</h1>
+Name
+<input type="text" [(ngModel)]="product.name" class="form-control" formControlName="name">
+<div *ngFor="let u of error_messages.name">
+    <div *ngIf="myForm.get('name').hasError(u.type)">
+        <b style="color:red">{{u.message}}</b>
+    </div>
+</div>
+<br>
+Description
+<input type="text" [(ngModel)]="product.desc" class="form-control">
+<br>
+Price
+<input type="number" [(ngModel)]="product.price" class="form-control">
+<br>
+<button (click)="addProduct()" class="btn btn-primary">Add Product</button>
+
+</form>
