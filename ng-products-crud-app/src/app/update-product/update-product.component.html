@@ -1,0 +1,8 @@
+Id:
+<input type="number" readonly class="form-control" [(ngModel)]="product.id">
+Name:
+<input type="text" class="form-control" [(ngModel)]="product.name">
+Price:
+<input type="number" class="form-control"[(ngModel)]="product.price">
+<br>
+<button (click)="updateProduct()" class="btn btn-info">Save</button>

@@ -1,0 +1,18 @@
+<table class='table'>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    <tr *ngFor="let p of product|paginate:{itemsPerPage:3,currentPage:p}">
+         <td>{{p.id}}</td>
+         <td>{{p.name}}</td>
+         <td>{{p.price}}</td>
+         <td><a routerLink="/update" [state]="{product: p}" class="btn btn-info">Update</a></td>
+         <td><button class="btn btn-danger" (click)="deleteProduct(p.id)">Delete</button></td>
+    </tr>
+</table>
+
+<pagination-controls (pageChange)="p=$event"></pagination-controls>
+
+<a routerLink="/add" class="btn btn-primary">Add</a>

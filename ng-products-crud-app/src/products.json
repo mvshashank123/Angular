@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "rice",
+      "price": 65
+    },
+    {
+      "name": "orange",
+      "price": 75,
+      "id": 2
+    },
+    {
+      "name": "banana",
+      "price": 32,
+      "id": 3
+    },
+    {
+      "name": "orange",
+      "price": 57,
+      "id": 4
+    },
+    {
+      "name": "appkel",
+      "price": 79,
+      "id": 5
+    },
+    {
+      "name": "dsd",
+      "price": 55,
+      "id": 6
+    },
+    {
+      "name": "ads",
+      "price": 454,
+      "id": 7
+    },
+    {
+      "name": "adbh",
+      "price": 154,
+      "id": 8
+    },
+    {
+      "name": "dfn",
+      "price": 78,
+      "id": 9
+    }
+  ]
+}
