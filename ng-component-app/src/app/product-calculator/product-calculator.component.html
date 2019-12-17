@@ -1,0 +1,32 @@
+Category<br>
+<select [(ngModel)]="pr">
+    <option *ngFor="let p of li">{{p}}</option>
+</select>
+
+<div [ngSwitch]="pr">
+    Product
+    <div *ngSwitchCase="'Electronics'">
+        <select>
+        <option *ngFor="let e of ec";let price=e.pr; [(ngModel)]="price">{{e.id}}</option>
+    </select>
+    <!-- <div [ngSwitch]="elec">
+        <div *ngSwitchCase="'Television'";
+    </div> -->
+    </div>
+    <div *ngSwitchCase="'Grocery'">
+            <select>
+            <option *ngFor="let g of gr"let price=g.pr; [(ngModel)]="price">{{g.id}}</option>
+        </select>
+        </div>
+
+</div>
+<div>
+    <caption>Quantity</caption>
+    <input type="number" [(ngModel)]="qty">
+</div>
+
+Total Price<p [(ngModel)]="res">{{res*price}}</p>
+
+<div>
+    <button (click)="calc()">Submit</button>
+</div>

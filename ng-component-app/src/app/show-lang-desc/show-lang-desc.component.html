@@ -1,0 +1,10 @@
+ <select [(ngModel)]="lang">
+    <option *ngFor ="let l of langs">{{l}}</option>
+</select>
+
+<div [ngSwitch]="lang">
+    <div *ngSwitchCase="'java'">It is an OOPL</div>
+    <div *ngSwitchCase="'react'">It is a lang</div>
+    <div *ngSwitchCase="'angular'">It is a JS MVC framework</div>
+    <div *ngSwitchDefault>Select a language</div>
+</div>

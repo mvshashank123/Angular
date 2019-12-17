@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="tsk"><br>
+<button (click)="addtask()">Add Task</button>
+
+<ul *ngFor="let l of TaskList">
+    <li >{{l}}
+    <button (click)="remove(l)">Remove</button>
+</ul>

@@ -1,0 +1,19 @@
+<select [(ngModel)]="state">
+    <h3>States</h3>
+    <option *ngFor="let s of states">{{s}}</option>
+</select>
+<div [ngSwitch]="state">
+    <h3>Cities</h3>
+<div *ngSwitchCase="'Tamil Nadu'"><select>
+    <option *ngFor="let n of tn">{{n}}</option>
+</select>
+</div>
+<div *ngSwitchCase="'Telangana'"><select>
+    <option *ngFor="let t of tl">{{t}}</option>
+</select>
+</div>
+<div *ngSwitchCase="'Karnataka'"><select>
+    <option *ngFor="let k of ka">{{k}}</option>
+</select>
+</div>
+</div>
